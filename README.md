@@ -1,10 +1,10 @@
 # Desktop-like-Website
 A webpage that uses angular to recreate a fully functional operating system
-#Build
+# Build
 install angular: <code>npm install @angular/cli</code>
  serve the website: <code>ng serve</code>
  
-#About
+# About
 As any other Desktop environment this features a fully custamizable desktop with icons and the bottim navbar
 <p align="center"><img src="https://github.com/Frenchiehl2/Desktop-like-Website/blob/main/Docs/Desktop.png" width="600" height="300"></p>
 
