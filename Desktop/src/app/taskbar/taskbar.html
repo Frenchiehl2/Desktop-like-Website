@@ -1,0 +1,19 @@
+<div class = "startMenu"><app-start-menu [visible]="taskbarVisible" (openFromStart)="OnMoveToDesktop($event)"></app-start-menu> </div>
+<div class ="taskbar">
+     <div #startButton class="startButton" (mouseup)="OnMousePressDown(startButton)">
+         <img d = "startText" src="start.webp">
+     </div>
+     <div class = "tasksContainer">
+     <ng-container #tasks>
+     </ng-container>
+     </div>
+     <div class = "spacer"></div>
+     <div class = "extras">
+            <h3>ENG</h3>
+            <div style="width: 20px;"></div>
+                <h3 class="time">{{CurrentDate | date:'short'}}</h3>
+     </div>
+    
+</div>
+  
+

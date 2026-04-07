@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss';
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Force full viewport height */
+html, body {
+  height: 98%;
+  min-height: 98dvh; /* Recommended for mobile browsers with dynamic address bars */
+  min-width: 500px;
+  min-height: 500px;
+  background-color: black;
+}

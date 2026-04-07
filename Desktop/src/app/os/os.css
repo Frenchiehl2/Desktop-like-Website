@@ -1,0 +1,37 @@
+.mainFrame {
+  height: 95%;
+  min-height: 95dvh; /* Recommended for mobile browsers with dynamic address bars */
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-width: 2px;
+  border-top-right-radius: epx;
+  border-top-left-radius: 3px;
+  box-sizing: border-box;
+
+  background-image:url(wallpaper.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  
+  background-color: gray;
+  border-color: rgb(49, 90, 49);
+}
+
+.viewPort{
+   display: inline-grid;
+   grid-template-columns:  auto auto auto;
+} 
+
+.windows{
+  display: grid;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+:host{
+   position: center;
+   size: cover;
+   color: rgb(0, 0, 0);
+}

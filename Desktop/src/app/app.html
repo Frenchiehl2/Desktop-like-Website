@@ -1,0 +1,2 @@
+<app-os #os (snedItemToTaskbar)="addToTaskBar(taskbar,$event)" (removeFromTaskbar)="removeFromtaskBar(taskbar,$event) "></app-os>
+<app-taskbar #taskbar (toDesktop)="addToDesktop(os,$event)"></app-taskbar>

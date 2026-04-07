@@ -1,0 +1,31 @@
+@if(visible){
+    <div class = "window"  cdkDrag #dragRef = "cdkDrag" cdkDragBoundary=".mainFrame" [cdkDragDisabled]="isFullscreen" (cdkDragEnded)="onDragEnd($event)" [cdkDragFreeDragPosition]="freePos" [style.width.px]="width" [style.height.px]="height">
+        <div class = "topBar">
+            <div class = "app-header"><img class ="appImage" src = {{IconPath}} alt=""><p>{{appTitle}}</p>
+                <div style="width: 50px;"></div>
+                <img class = "resizer" src = "window-contract.webp"  (mouseup)="OnSizeDown()">
+                <img class = "resizer" src = "window-expand.webp"  (mouseup)="OnSizeUp()">
+         
+            </div>
+            <div class="controlIcons">
+                <div class ="minimizeIconBackground">
+                     <img class ="minimize" src = "minimize.webp" alt=""(mouseup)="OnMinimize(IconPath,appTitle)">  
+                </div>
+                  <div class = "spacer"></div>
+                <div class ="fulscreenIconBackground">
+                     <img class ="fullScreen" src = {{fullscreenIcon}} alt=""(mouseup)="OnFullScreenPressed(dragRef)">  
+                </div>
+                <div class = "spacer"></div>
+                <div class = "exitIconBackground">
+                      <img class ="exit" src = "exit.webp" alt=""(mouseup)="OnMousePressed(dragRef)">
+                </div>
+            </div>    
+        </div>
+        <div class = "contentWindowContainer">
+        <div class = "contentWindow"  [style.width.px]="contentWidth" [style.height.px]="contentHeight">
+            <ng-content></ng-content>
+        </div>
+        </div>
+    </div>
+
+}

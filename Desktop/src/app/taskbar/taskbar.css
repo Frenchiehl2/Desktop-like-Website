@@ -1,0 +1,91 @@
+.taskbar{
+    height: 3%;
+    min-height: 3dvh;
+    min-height: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 3px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-color: rgb(49, 90, 49);
+    background-image: linear-gradient(to bottom ,rgba(187, 208, 238, 0.842),rgba(132, 140, 145, 0.753));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur();
+}
+.startButton{
+     background-color: rgba(61, 131, 221, 0.699);
+    backdrop-filter: blur(2px);
+    transition: 0.2s;
+    width: 2%;
+    min-width: 2dvh;
+    min-width: 50px;
+    height: 4%;
+    min-height: 4dvh;
+    min-height: 50px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-bottom: 15px;
+     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.466);
+ }
+.startButton{
+      cursor: pointer;
+}
+.startButton:hover{
+    background-color: rgba(61, 131, 221, 0.699);
+    transition: 0.2s;
+}
+.startButton:active{
+    background-color: rgba(61, 131, 221, 0.699);
+    transition: 0.1s;
+     box-shadow: 0 0 0;
+     border-width: 1px;
+     
+}
+#startText{
+    padding-top: 8px;
+    
+}
+.tasksContainer{
+  
+    width: 75%;
+    height: 40px;
+    display: flex;
+    align-items: start;
+    margin-top:3px;
+    overflow-x:auto;
+  
+}
+.extras{
+    background-image: linear-gradient(to bottom ,rgba(187, 208, 238, 0.842),rgba(132, 140, 145, 0.753));
+    min-width: 1dvh;
+    min-width: 100px;
+    height: 3%;
+    min-height: 3dvh;
+    min-height: 40px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-top: 9px;
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+}
+.spacer{
+    min-width: 100px;
+}
+#tasks{
+     min-height: 35px;
+     align-items: start;
+     width: 85%;
+     display: flex;
+  
+}
+.time{
+    min-width: 140px;
+}

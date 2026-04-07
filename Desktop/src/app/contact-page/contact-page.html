@@ -1,0 +1,22 @@
+<div class = "contentPage">
+    <div class = "head">
+        <h1 style="font-size: 200%;font-weight: bolder;">Contact Me</h1>
+    </div>
+
+    <div class = "body">
+        <div class = "Description">
+            <p> The best way to contact me is through <code style="font-weight: bold;">email</code>, any and all questions are welcome and i will try to respond in a timely manner, thank you.</p>
+        </div>
+        <div style="height: 20px;"></div>
+        <div class = "contacts">
+            <div #emailLink style="display: flex; justify-content: start;">
+                <p  style="justify-self: center">email me at:   <button class ="copy-button" [cdkCopyToClipboard]="userEmail" (mouseup)="onCopied(emailLink)">frenchiehl2@gmail.com</button></p>
+              
+            </div>
+            <div style="height: 10px;"></div>
+            <div><p> or press to open your app of chouse:<a class="emailButton" href="mailto:frenchiehl2@gmail.com">Send an email!</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>

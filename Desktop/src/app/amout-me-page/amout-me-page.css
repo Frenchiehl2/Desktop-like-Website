@@ -1,0 +1,65 @@
+.contentPage{
+    border-width: 1px;
+    margin: 10px;
+    margin-right: 15px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 3px;
+    display: grid ;
+    justify-content: center;
+    overflow-y: auto;
+}
+.header{
+    justify-self: center;
+}
+.body{
+    padding: 10px;
+    margin: 10px;
+}
+.Description{
+    margin: 10px;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 10px;
+
+}
+
+.technologies{
+    padding-top: 10px;
+    border-top-width: 2px;
+}
+.proficienciesList{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.spacer{
+    height: 20px;
+}
+.image{
+    justify-self: center;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
+.listElement{
+    margin: 5px;
+    border-width: 1px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.466);
+    transition: 0.2s;
+}
+.listElement:hover{
+    transition: 0.2s;
+    background-color: rgb(210, 210, 236);
+    transform: translateY(-2px);
+}
+
+.tools{
+    padding-top: 10px;
+    border-top-width: 2px;
+    margin-top: 20px;
+}
+

@@ -1,0 +1,70 @@
+.startMenu{
+    width: 20dvw;
+    min-width: 450px;
+    height: 50vh;
+    min-height: 00px;
+    display: flex;
+    position: fixed;
+    left: 7px;
+    bottom: 4.5dvh;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(to bottom , rgba(116, 116, 116, 0.637), rgba(87, 87, 87, 0.966));
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.profileImage{
+    background-color: rgba(255, 255, 255, 0.151);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    width: 115px;
+    height: 115px;
+    justify-self: center;
+}
+.image{
+    padding: 6px;
+    border-radius: 8px;
+}
+.utilityList{
+    display: block;
+    padding-top: 10px;
+    position: relative;
+}
+.appList{
+    width: 50%;
+    min-width: 250px;
+    min-height: 200px;
+    background-color: rgb(218, 218, 218);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-y: scroll;
+}
+.utility{
+    margin-top: 20px;
+}
+.shutdownButton{
+    background-color: red;
+    position: absolute;
+    bottom: 1dvh;
+    right: 0;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    transition: 0.1s;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.466);
+}
+.shutdownButton:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: 0.2s;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0);
+}
+.shutdownButton:active{
+    transform:translateY(2px);
+    transition: 0.1s;
+     box-shadow: 0 8px 8px rgba(0, 0, 0, 0);
+}

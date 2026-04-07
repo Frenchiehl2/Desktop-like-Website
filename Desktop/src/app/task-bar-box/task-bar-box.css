@@ -1,0 +1,43 @@
+.background{
+  
+    background-image: linear-gradient(to bottom ,rgba(187, 208, 238, 0.842),rgba(132, 140, 145, 0.753));
+    height: 35px;
+    width: 10dvw;
+    min-width: 120px;
+    border-radius: 8px;
+    border-color: rgba(139, 137, 137, 0.733);
+    border-width: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: rgba(146, 142, 142, 0.493);
+    backdrop-filter: blur(2px);
+    background-attachment: local;
+}
+
+.background:hover{
+   
+    backdrop-filter: blur(2px);
+    background-attachment: local;
+    background-image: linear-gradient(to bottom ,rgba(187, 208, 238, 0.842), rgba(104, 151, 221, 0.637));
+}
+.background:active{
+     background-color: rgba(182, 178, 178, 0.815);
+    transform: translateY(1px);
+    transition: 0.05s;
+     backdrop-filter: blur(2px);
+    background-attachment: local;
+}
+
+.appIcon{
+    width: 25px;
+    height: 25px;
+    
+}
+.spacer{
+    width: 10px;
+}

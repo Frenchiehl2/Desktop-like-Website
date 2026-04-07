@@ -1,0 +1,170 @@
+
+.contentWindow{
+    background-color: rgb(236, 236, 236);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition:0.05s;
+     width: 50dvw;
+     height: 50dvh;
+     padding: 1px;
+     border-radius: 5px;
+     
+}
+.window{
+    transform: translate(1px,1px);
+    transform: translate(-1px,-1px);
+    transition: 0.05s;
+    position: absolute;
+     width: 50dvw;
+     height: 50dvh;
+    top:0;
+    left:-110px;  
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.466);
+    border-radius: 12px;
+}
+
+
+
+.topBar{
+    background-color: rgba(167, 206, 224, 0.747);
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    height: 40px;
+    padding: 2px;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    backdrop-filter: blur(2px);
+    background-attachment: local
+
+}
+.contentWindowContainer{
+    padding-left: 6px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    backdrop-filter: blur(2px);
+    background-attachment: local;
+   background-color: rgba(167, 206, 224, 0.747);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+}
+
+
+.spacer{
+    width: 5px;
+}
+.appImage{
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+}
+.controlIcons{
+    display:flex;
+    background-attachment: fixed;
+    align-items: center;
+    padding-right: 5px;
+
+}
+.exit{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+      cursor: pointer;
+    background-color:rgba(211, 129, 115, 0.445) ;
+      backdrop-filter: blur(2px);
+    background-attachment: local
+}
+.exit:hover{
+    transition: 0.1s;
+    
+}
+.exit:active{
+     transform: translateY(1px);
+     background-color:  rgba(211, 129, 115, 0.445) ;
+     transition: 0.1s;
+       backdrop-filter: blur(2px);
+    background-attachment: local
+     
+}
+.exitIconBackground{
+    padding: 5px;
+    border-radius: 3px;
+}
+.exitIconBackground:hover{
+    transition: 0.1s;
+    background-color:rgba(211, 129, 115, 0.445) ;
+      backdrop-filter: blur(2px);
+    background-attachment: local
+}
+
+.fulscreenIconBackground{
+    padding: 5px;
+    border-radius: 3px;
+}
+.fulscreenIconBackground:hover{
+    transition: 0.1s;
+    background-color: rgba(131, 155, 155, 0.637);
+}
+.fullScreen{
+     width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(115, 160, 243, 0.384);
+      backdrop-filter: blur(2px);
+    background-attachment: local
+    
+}
+.fullScreen:active{
+     transform: translateY(1px);
+     background-color:  rgba(115, 136, 136, 0.445) ;
+     transition: 0.1s;
+}
+.minimize{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+       background-color: rgba(115, 160, 243, 0.349);
+      backdrop-filter: blur(2px);
+    background-attachment: local;
+    cursor: pointer;
+}
+.minimizeIconBackground{
+    padding: 5px;
+    border-radius: 3px;
+}
+.minimizeIconBackground:hover{
+    transition: 0.1s;
+    background-color: rgba(131, 155, 155, 0.637);
+}
+.minimize:active{
+     transform: translateY(1px);
+     background-color:  rgba(115, 136, 136, 0.445) ;
+     transition: 0.1s;
+}
+.app-header{
+    display: flex;
+}
+.resizer{
+    width:25px;
+    height:25px;
+    margin-left: 10px;
+      cursor: pointer;
+       background-color: rgba(115, 160, 243, 0.212);
+      backdrop-filter: blur(2px);
+    background-attachment: local
+}
+.resizer:hover{
+    background-color: rgba(62, 143, 235, 0.459);
+    border-width: 2px;
+    border-color: rgba(127, 182, 255, 0.541);
+    border-radius: 5px;
+}
+.resizer:active{
+    transition: 0.05s;
+    transform: translateY(1px);
+}
+

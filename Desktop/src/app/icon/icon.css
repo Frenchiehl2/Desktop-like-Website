@@ -1,0 +1,36 @@
+:host{
+    width: 110px;
+    height: 110px;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    transition: 0.05s;
+    background-color: rgba(82, 74, 74, 0);
+}
+
+.icon{
+  display: grid; place-items: center;
+  border-radius: 5%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+
+}
+.IconImage{
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    
+}
+.icon:hover{
+    background-color: rgba(80, 87, 87, 0.13);
+    transform: scale(1.02);
+    transition: 0.1s;
+}
+.icon:active{
+     transform: translateY(2px);
+     background-color:  rgba(115, 136, 136, 0.445) ;
+     transition: 0.1s;
+}
+#appTitle{
+    align-items: center;
+}

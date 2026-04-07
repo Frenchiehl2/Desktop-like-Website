@@ -1,0 +1,50 @@
+.contentPage{
+    border-width: 1px;
+    margin: 5px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid ;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.header{
+    justify-self: center;
+    margin: 10px;
+}
+.body{
+    margin: 10px;
+}
+.description{
+    padding: 10px;
+    justify-self: center;
+    align-content: center;
+    border-radius: 3px;
+    border-width: 1px;
+    width: 100%;
+}
+.models{
+    margin-top: 10px;
+    border-top-width: 2px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+
+.model{
+    justify-self: center;
+}
+.sketchLink{
+    background-color: rgba(148, 188, 214, 0.753);
+    border-radius: 4px;
+    transform: 0.2s;
+    margin: 5px;
+    padding: 3px;
+}
+.sketchLink:hover{
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
+.sketchLink:active{
+    transition: 0.2s;
+}

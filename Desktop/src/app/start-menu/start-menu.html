@@ -1,0 +1,15 @@
+@if(visible){
+    <div class="startMenu">
+        <div class = "appList">
+            <app-icon #aboutMeIcon  IconPath ="about_me.webp" Title="About Me" [starterIcon]="true" (Open)="OnAppOpen(aboutMeIcon)"></app-icon>
+            <app-icon #projectsIcon  IconPath ="projects.webp" Title="Projects" [starterIcon]="true" (Open)="OnAppOpen(projectsIcon)"></app-icon>
+            <app-icon #modelsIcon IconPath ="models.webp" Title="Models" [starterIcon]="true" (Open)="OnAppOpen(modelsIcon)"></app-icon>
+            <app-icon #contactsIcon  IconPath="contacts.webp" Title="Contact" [starterIcon]="true" (Open)="OnAppOpen(contactsIcon)"></app-icon>
+            <app-icon #helpIcon  IconPath="help.webp" Title="Help" [starterIcon]="true" (Open)="OnAppOpen(helpIcon)"></app-icon>
+        </div>
+        <div class = "utilityList">
+            <div class = "profileImage"><img class="image" src="profileIcon.webp"></div>
+            <div class = "shutdownButton"> <img src="power.webp" (mouseup)="OnPowerPress()"></div>
+        </div>
+    </div>
+} 
