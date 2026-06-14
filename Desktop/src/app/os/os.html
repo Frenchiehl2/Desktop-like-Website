@@ -1,22 +1,21 @@
-<div class ="mainFrame">
-    <div class = "viewPort">
+<div class ="mainFrame" (mousedown)="OnMousePressed($event)">
+    <div class = "viewPort" >
 
         <div class="icons">
-            <app-icon #aboutMeIcon cdkDrag cdkDragBoundary=".mainFrame"  #deagRef="cdkDrag" IconPath ="about_me.webp" Title="About" (Open)="OnWindowOpen(aboutMeIcon)"></app-icon>
-            <app-icon #projectsIcon cdkDrag cdkDragBoundary=".mainFrame" IconPath ="projects.webp" Title="Projects" (Open)="OnWindowOpen(projectsIcon)"></app-icon>
-            <app-icon #modelsIcon cdkDrag cdkDragBoundary=".mainFrame"  IconPath ="models.webp" Title="Models"  (Open)="OnWindowOpen(modelsIcon)"></app-icon>
-            <app-icon #contactsIcon cdkDrag cdkDragBoundary=".mainFrame" IconPath="contacts.webp" Title="Contact"   (Open)="OnWindowOpen(contactsIcon)"></app-icon>
-            <app-icon #helpIcon cdkDrag cdkDragBoundary=".mainFrame" IconPath="help.webp" Title="Help"   (Open)="OnWindowOpen(helpIcon)"></app-icon>
+            <app-icon #aboutMeIcon cdkDrag cdkDragBoundary=".mainFrame"  #deagRef="cdkDrag" IconPath ="about_me.webp" Title="About" (Open)="OnWindowOpen(aboutMeIcon)" (Open) ="ReorderWindows(aboutMeWindow)"></app-icon>
+            <app-icon #projectsIcon cdkDrag cdkDragBoundary=".mainFrame" IconPath ="projects.webp" Title="Projects" (Open)="OnWindowOpen(projectsIcon)" (Open) ="ReorderWindows(projectsWindow)"></app-icon>
+            <app-icon #modelsIcon cdkDrag cdkDragBoundary=".mainFrame"  IconPath ="models.webp" Title="Models"  (Open)="OnWindowOpen(modelsIcon)" (Open) ="ReorderWindows(modelsWindow)" ></app-icon>
+            <app-icon #contactsIcon cdkDrag cdkDragBoundary=".mainFrame" IconPath="contacts.webp" Title="Contact"   (Open)="OnWindowOpen(contactsIcon)" (Open) ="ReorderWindows(contactsWindow)"></app-icon>
+            <app-icon #helpIcon cdkDrag cdkDragBoundary=".mainFrame" IconPath="help.webp" Title="Help"   (Open)="OnWindowOpen(helpIcon)" (Open) ="ReorderWindows(helpWindow)"></app-icon>
             <app-icon #biteIcon cdkDrag cdkDragBoundary=".mainFrame" IconPath="bitelogo.webp" Title="Gameworks"   (Open)="OnGameworksOpen()"></app-icon>
       
             </div>
             <div class="windows"> 
-                <app-contentWindow #aboutMeWindow [visible]="aboutMeWindowVisible" IconPath ="about_me.webp"  appTitle="About Me" (close)="OnWindowClose(aboutMeWindow)" (toTaskbar)="handleSendingToTaskbar($event)"><app-amout-me-page [contentWIdth]="aboutMeWindow.contentWidth" [contentHeight]="aboutMeWindow.contentHeight"></app-amout-me-page></app-contentWindow>
-                <app-contentWindow #projectsWindow [visible]="projectsWindowVisible"  IconPath ="projects.webp"  appTitle="Projects" (close)="OnWindowClose(projectsWindow)" (toTaskbar)="handleSendingToTaskbar($event)" ><app-projects-page [contentWIdth]="projectsWindow.width" [contentHeight]="projectsWindow.height"></app-projects-page></app-contentWindow>
-                <app-contentWindow #modelsWindow [visible]="modelsWidnowVisible"  IconPath ="models.webp"  appTitle="Models" (close)="OnWindowClose(modelsWindow)" (toTaskbar)="handleSendingToTaskbar($event)"><app-models-page [contentWIdth]="modelsWindow.width" [contentHeight]="modelsWindow.height"></app-models-page></app-contentWindow>
-                <app-contentWindow #contactsWindow [visible]="contactsWindowVisible"  IconPath ="contacts.webp"  appTitle="Contact" (close)="OnWindowClose(contactsWindow)" (toTaskbar)="handleSendingToTaskbar($event)"><app-contact-page></app-contact-page></app-contentWindow>
-                <app-contentWindow #helpWindow [visible]="helpWindowVisible"  IconPath ="help.webp"  appTitle="Help" (close)="OnWindowClose(helpWindow)" (toTaskbar)="handleSendingToTaskbar($event)"><app-help-page></app-help-page></app-contentWindow>
-               
+                <app-contentWindow #aboutMeWindow [visible]="aboutMeWindowVisible" IconPath ="about_me.webp"  appTitle="About Me" (close)="OnWindowClose(aboutMeWindow)" (toTaskbar)="handleSendingToTaskbar($event)" (windowSelected) ="ReorderWindows(aboutMeWindow)"><app-amout-me-page [contentWIdth]="aboutMeWindow.contentWidth" [contentHeight]="aboutMeWindow.contentHeight"></app-amout-me-page></app-contentWindow>
+                <app-contentWindow #projectsWindow [visible]="projectsWindowVisible"  IconPath ="projects.webp"  appTitle="Projects" (close)="OnWindowClose(projectsWindow)" (toTaskbar)="handleSendingToTaskbar($event)" (windowSelected) ="ReorderWindows(projectsWindow)"><app-projects-page [contentWIdth]="projectsWindow.width" [contentHeight]="projectsWindow.height"></app-projects-page></app-contentWindow>
+                <app-contentWindow #modelsWindow [visible]="modelsWidnowVisible"  IconPath ="models.webp"  appTitle="Models" (close)="OnWindowClose(modelsWindow)" (toTaskbar)="handleSendingToTaskbar($event)"  (windowSelected) ="ReorderWindows(modelsWindow)"><app-models-page [contentWIdth]="modelsWindow.width" [contentHeight]="modelsWindow.height" [signal]="childLoadMosels" ></app-models-page></app-contentWindow>
+                <app-contentWindow #contactsWindow [visible]="contactsWindowVisible"  IconPath ="contacts.webp"  appTitle="Contact" (close)="OnWindowClose(contactsWindow)" (toTaskbar)="handleSendingToTaskbar($event)"(windowSelected) ="ReorderWindows(contactsWindow)"><app-contact-page></app-contact-page></app-contentWindow>
+                <app-contentWindow #helpWindow [visible]="helpWindowVisible"  IconPath ="help.webp"  appTitle="Help" (close)="OnWindowClose(helpWindow)" (toTaskbar)="handleSendingToTaskbar($event)" (windowSelected) ="ReorderWindows(helpWindow)"><app-help-page></app-help-page></app-contentWindow>        
         </div>
   </div>
 </div>

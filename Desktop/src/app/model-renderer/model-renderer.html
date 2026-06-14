@@ -1,0 +1,7 @@
+<canvas 
+class = "resetButton" (mouseup)="OnReset($event)"
+style="margin: 10px;
+border-radius: 1px;"
+id = {{modelID}}></canvas>
+<div [hidden] = "isHidden" class = "preview"><img class = "previrewImage" (mouseup)="OnReset($event)" src="{{previewImage}}"></div>
+<div class = "link"><a href={{modelLink}} target="_blank"><img class = "image" src="modelsPage/sketchfab.webp"></a></div>

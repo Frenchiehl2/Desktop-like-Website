@@ -1,7 +1,7 @@
 <div class = "startMenu"><app-start-menu [visible]="taskbarVisible" (openFromStart)="OnMoveToDesktop($event)"></app-start-menu> </div>
 <div class ="taskbar">
      <div #startButton class="startButton" (mouseup)="OnMousePressDown(startButton)">
-         <img d = "startText" src="start.webp">
+         <img  id= "startImage" src="start.webp">
      </div>
      <div class = "tasksContainer">
      <ng-container #tasks>

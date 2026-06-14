@@ -3,16 +3,21 @@
         <h1 style="font-size: 200%; font-weight: bolder;">Models</h1>
     </div>
     <div class ="body">
-        <div class = "description"> Feel free to check out some of my 3D modeling work, as there are alot still in progress. have a look at my Sketchfab page for a more detailed view at my : <a class = "sketchLink" href="https://sketchfab.com/frenchiehl2"  target="_blank">Profile</a></div>
+        <div class = "description">Wellcome to my models page,<br>
+        feel free to check out some of my 3D modeling work, as there are alot still in progress. have a look at my Sketchfab page as well: <a class = "sketchLink" href="https://sketchfab.com/frenchiehl2"  target="_blank">Profile</a><br><br>
+        Load the models by <code><b>clicking</b> </code> their respective previews and use <code><b>right</b></code> mouse button and <code><b>middle</b></code> mouse button to instect them</div>
+        
         <div class ="models">
-            <div class = "model">Model</div>
-            <div class = "model">Model</div>
-            <div class = "model">Model</div>
-            <div class = "model">Model</div>
-            <div class = "model">Model</div>
-            <div class = "model">Model</div>
-            <div class = "model">Model</div>
-
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="0" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/industrial-tower-ef8cc1eeaa134de180af4b408c2a6ba3'"[previewImage] = "'placehoalderImages/Tower.webp'" [Model]="'Models/IndustrialTower.glb'" [CamXpos] = "0"[CamYpos] = "22" [CamZpos]="45"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="1" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/wind-turbine-bcd42f420164432c9ddcdb9c0292b8a3'" [previewImage] = "'placehoalderImages/Turbine.webp'" [Model]="'Models/WindTurbine.glb'" [CamXpos] = "0"[CamYpos] = "15" [CamZpos]="25"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="2" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/dragonfly-drop-ship-e7280d9011144dfd92f22668c023f32f'" [previewImage] = "'placehoalderImages/Dragonfly.webp'" [Model]="'Models/Dragonfly.glb'"[CamYpos] = "0" [CamZpos] = "15"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="3" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/hover-tank-c7e93375b02648399f48d5561a06f43d'" [previewImage] = "'placehoalderImages/HoverTank.webp'" [Model]="'Models/Hovertank.glb'"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="4" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/radio-dish-f619dca5fef44067805bb315f93dd666'" [previewImage] = "'placehoalderImages/RadioDish.webp'" [Model]="'Models/RadioDish.glb'" [CamYpos] = "4"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="5" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/speeder-drone-cf96d144314a45baaf020e8104703bcd'" [previewImage] = "'placehoalderImages/Drone.webp'" [Model]="'Models/HoverBike.glb'" [CamYpos] = "0"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="6" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/glasser-c8d4eec25a90449f85e2fec7449e76c7'" [previewImage] = "'placehoalderImages/Glasser.webp'" [Model]="'Models/Glasser.glb'" [CamYpos] = "-5" [CamZpos]="30"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="7" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/futuristic-oil-extractor-d0766d1c48c942f9ad840274c27ee289'" [previewImage] = "'placehoalderImages/Extractor.webp'" [Model]="'Models/OilExtractor.glb'" [CamYpos] = "5"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="8" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/solar-panel-0b028f10d595414495516afc14de31d4'" [previewImage] = "'placehoalderImages/SolarPanel.webp'" [Model]="'Models/SolarPanel.glb'"></app-model-renderer></div>
+            <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="9" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/crane-58b0471abfc04206bc718f615d9b3a93'" [previewImage] = "'placehoalderImages/Crane.webp'" [Model]="'Models/Crane.glb'" [CamYpos] = "10" [CamZpos]="30"></app-model-renderer></div>
         </div>
     </div>
 

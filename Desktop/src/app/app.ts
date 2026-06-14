@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { OS } from './os/os';
 import { Icon } from "./icon/icon";
 import { Taskbar } from "./taskbar/taskbar";
+import { element } from 'three/src/nodes/TSL.js';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,9 @@ export class App {
   }
 
   removeFromtaskBar(element:Taskbar,data:{appTitle:string}){
-    element. removeFromtaskBar(data.appTitle);
+    element.removeFromtaskBar(data.appTitle);
+  }
+  ExternamyCloseStartMenu(element:Taskbar){
+    element.ExternamyCloseStartMenu();
   }
 }

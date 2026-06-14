@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output,HostBinding, OnInit, ViewChild} from '@angular/core';
+import { Component, EventEmitter, Input, Output,HostBinding, OnInit, ViewChild, SimpleChanges} from '@angular/core';
 import { CdkDrag,CdkDragEnd,DragRef,Point} from "@angular/cdk/drag-drop";
 import { DragDropModule } from '@angular/cdk/drag-drop'
 
@@ -9,7 +9,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop'
   templateUrl: './window.html',
   styleUrl: './window.scss',
 })
-export class ContentWindow implements OnInit{
+export class ContentWindow{
   @Input() appTitle = "App";
   @Input() IconPath = "";
   @Input() visible = false;
@@ -17,10 +17,11 @@ export class ContentWindow implements OnInit{
   
   @Output() close = new EventEmitter<void>();
   @Output() toTaskbar = new EventEmitter<{appIconPath:string,appTitle:string}>();
+  @Output() windowSelected = new EventEmitter<{}>();
 
   @ViewChild(CdkDrag) cdkDrag!: CdkDrag;
   
-  width = 1000;
+  width = 1200;
   height = 800;
 
   minWidth = this.width;
@@ -30,18 +31,25 @@ export class ContentWindow implements OnInit{
   contentHeight = this.height - 40 - 6;
   
   isFullscreen = false;
-  
-  freePos:Point = {x:window.innerWidth/4,y:window.innerHeight/5};
-  
+
+  freePos:Point = {x:window.innerWidth * 0.25,y:window.innerHeight * 0.15};
+
   tempWidth = 0;
   tempHeight = 0;
-  ;
-  //this timer also doesnt work for some reason
-  ngOnInit(): void {
-    //interval(500).subscribe(() => { if(this.isFullscreen){this.refreshSize()}});
-   
-  }
+
+  zIndex = 0;
+  
+  ngOnChanges(changes: SimpleChanges) {
  
+     if (changes['visible']) {
+      if(this.visible == true){
+         this.WindowSelected();
+      }
+     }
+   }
+
+  //this timer also doesnt work for some reason
+
   OnMousePressed(dragRef: CdkDrag){
     this.close.emit();
     if(this.isFullscreen){
@@ -72,7 +80,6 @@ export class ContentWindow implements OnInit{
   }
   onDragEnd(event: CdkDragEnd){
     this.freePos = event.source.getFreeDragPosition();
-  
   }
 
   restoreDefaultResolution(dragRef: CdkDrag){
@@ -82,18 +89,17 @@ export class ContentWindow implements OnInit{
        this.updateContentWidow();
        this.fullscreenIcon = 'maximize.webp';
   }
-  
+
   refreshSize(){
     this.width = window.innerWidth - 12;
     this.height = window.innerHeight - 65;
-    console.log("new Width: " + this.width);
-    console.log("new height: " + this.height);
+
        this.updateContentWidow();
   }
 
   OnMinimize(iconPath:string,appTitle:string){
   
-      console.log("call to add to taskbar");
+  
       if(this.isFullscreen){
         this.width = this.tempWidth;
         this.height = this.tempHeight;
@@ -143,8 +149,8 @@ export class ContentWindow implements OnInit{
       }
       
     }
-    
-    console.log(newSizeWithOffsetY,window.innerHeight)
+  
+   
      if(newSizeWithOffsetY > window.innerHeight - this.taskBarYOffset){
       var moveOffsetY = newSizeWithOffsetY - (window.innerHeight - this.taskBarYOffset);
 
@@ -154,9 +160,23 @@ export class ContentWindow implements OnInit{
         return false;
       }
     }
-     console.log(this.freePos);
+    
      this.cdkDrag.setFreeDragPosition(this.freePos);
      return true;
   }
 
+  JitterWindow(){
+    var tempPos = this.freePos;
+    this.freePos = {x:this.freePos.x + 1,y:this.freePos.y + 1};
+    this.freePos = tempPos;
+  }
+  WindowSelected(){
+    this.windowSelected.emit();
+    this.zIndex = 1;
+    this.JitterWindow();
+  }
+
+  WindowDeselect(){
+    this.zIndex = 0;
+  }
 }

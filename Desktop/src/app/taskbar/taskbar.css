@@ -39,6 +39,7 @@
 .startButton:hover{
     background-color: rgba(61, 131, 221, 0.699);
     transition: 0.2s;
+    transform: scale(1.1);
 }
 .startButton:active{
     background-color: rgba(61, 131, 221, 0.699);
@@ -47,10 +48,10 @@
      border-width: 1px;
      
 }
-#startText{
-    padding-top: 8px;
-    
+#startImage{
+    border-radius: 50%;
 }
+
 .tasksContainer{
   
     width: 75%;

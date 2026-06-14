@@ -17,9 +17,10 @@ import { HelpPage } from '../help-page/help-page';
 })
 export class OS {
 
-   @Output() snedItemToTaskbar = new EventEmitter<{ appIconPath: string; appTitle: string }>();
+   @Output() snedItemToTaskbar = new EventEmitter<{appIconPath: string; appTitle: string }>();
    @Output() removeFromTaskbar = new EventEmitter<{appTitle:string}>();
-
+   @Output() closeStartMenu =  new EventEmitter<{}>();
+   
   aboutMeWindowVisible = false;
   projectsWindowVisible = false;
   modelsWidnowVisible = false;
@@ -32,7 +33,13 @@ export class OS {
   contactsWindowMinimized = false;
   helpWindowMinimized = false;
 
+  childLoadMosels = false;
 
+  Windows = new Array<ContentWindow>;
+
+  AddWidnow(element:ContentWindow){
+    this.Windows.push(element);
+  }
 
   OnWindowClose(element:ContentWindow){
     switch(element.appTitle){
@@ -44,6 +51,7 @@ export class OS {
         break; 
        case "Models":
           this.modelsWidnowVisible = false;
+          this.loadModles();
         break;
         case "Contact":
           this.contactsWindowVisible = false;
@@ -54,10 +62,17 @@ export class OS {
         }
   }
 
+
+  loadModles() {
+    this.childLoadMosels = true;
+    // Reset after handling if needed
+    setTimeout(() => this.childLoadMosels = false, 100);
+  }
+
    OnWindowOpen(element:Icon){
     switch(element.Title){
       case "About":
-          console.log("Open about me");
+       
           this.aboutMeWindowVisible = true;
         break;
       case "Projects":
@@ -65,6 +80,7 @@ export class OS {
         break;
         case "Models":
           this.modelsWidnowVisible = true;
+          this.loadModles();
         break;
        case "Contact":
           this.contactsWindowVisible = true;
@@ -76,7 +92,7 @@ export class OS {
   }
 
   handleSendingToTaskbar(data: { appIconPath: string; appTitle: string }){
-    console.log("signal to add to taskbar");
+   
 
 
     this.snedItemToTaskbar.emit({appIconPath :data.appIconPath , appTitle: data.appTitle});
@@ -96,6 +112,7 @@ export class OS {
         case "Models":
             this.modelsWidnowVisible = true;
             this.modelsWidnowMinimized = false;
+            this.loadModles();
         break;
        case "Contact":
             this.contactsWindowVisible = true;
@@ -116,5 +133,25 @@ export class OS {
     let win = window.open('https://bitegameworks.com/', '_blank')!;
     win.opener  = null;
     win.focus();
+  }
+
+  OnMousePressed($event: MouseEvent){
+    if($event.button == 0){
+      this.closeStartMenu.emit();
+    }
+  }
+
+  ReorderWindows(callingWindow:ContentWindow){
+  
+    if(!this.Windows.includes(callingWindow)){
+      this.Windows.push(callingWindow);
+      callingWindow.WindowSelected();
+    }
+
+    this.Windows.forEach(element=>{
+      if(callingWindow != element){
+        element.WindowDeselect();
+      }
+    })
   }
 }

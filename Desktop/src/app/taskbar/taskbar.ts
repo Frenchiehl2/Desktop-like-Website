@@ -41,7 +41,7 @@ export class Taskbar{
        this.interval = setInterval(() => {
         this.ngZone.run(() => {
           this.CurrentDate = new Date();
-          //console.log(this.CurrentDate)
+       
       });
       }, 1000);
     }
@@ -54,6 +54,10 @@ export class Taskbar{
     this.taskbarVisible = !this.taskbarVisible;
   }
 
+  ExternamyCloseStartMenu(){
+    this.taskbarVisible = false;
+  }
+
   OnAppendToTaskBar(iconPath:string = "",apptitle:string = "Default"){
 
     if(!this.checkTaskBar(apptitle)){
@@ -63,7 +67,7 @@ export class Taskbar{
     let task = this.vrc()?.createComponent(TaskBarBox);
     task?.setInput('iconPath',iconPath);
     task?.setInput('appTitle',apptitle);
-    console.log(task?.instance.appTitle);
+  
   
     task?.instance.moveToDesktop.subscribe(() => {this.toDesktop.emit( {appTitle: (task?.instance.appTitle) as string}); this.removeFromtaskBar((task?.instance.appTitle) as string)});
     task?.instance.terminate.subscribe(() => { this.removeFromtaskBar((task?.instance.appTitle) as string)});

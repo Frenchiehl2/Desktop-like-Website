@@ -17,15 +17,21 @@
 }
 .Description{
     margin: 10px;
-    border-width: 1px;
-    border-radius: 3px;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
     padding: 10px;
+    border-radius: 5px;
+     background:
+    linear-gradient(#fff, #cde4ffd7) padding-box,
+    linear-gradient(to right, rgb(208, 231, 241), blue) border-box;
+  background-clip: padding-box, border-box;
 
 }
 
 .technologies{
     padding-top: 10px;
     border-top-width: 2px;
+    border-image: linear-gradient(to right, #3abed5 0%, #3a4ed5 100%) 1;
 }
 .proficienciesList{
     display: grid;
@@ -50,16 +56,19 @@
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.466);
     transition: 0.2s;
+    min-height: 120px;
 }
 .listElement:hover{
-    transition: 0.2s;
-    background-color: rgb(210, 210, 236);
+    transition: color 1s ease-in-out;
+    transition: 0.4s;
+    background-color: #c4d4e9;
     transform: translateY(-2px);
 }
 
 .tools{
     padding-top: 10px;
     border-top-width: 2px;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
     margin-top: 20px;
 }
 

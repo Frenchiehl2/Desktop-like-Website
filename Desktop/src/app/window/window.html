@@ -1,6 +1,6 @@
 @if(visible){
-    <div class = "window"  cdkDrag #dragRef = "cdkDrag" cdkDragBoundary=".mainFrame" [cdkDragDisabled]="isFullscreen" (cdkDragEnded)="onDragEnd($event)" [cdkDragFreeDragPosition]="freePos" [style.width.px]="width" [style.height.px]="height">
-        <div class = "topBar">
+    <div class = "window" (mousedown)="WindowSelected()" cdkDrag #dragRef = "cdkDrag" cdkDragBoundary=".mainFrame" [cdkDragDisabled]="isFullscreen" (cdkDragEnded)="onDragEnd($event)" [cdkDragFreeDragPosition]="freePos"  [style.z-index]="zIndex" [style.width.px]="width" [style.height.px]="height">
+        <div class = "topBar" >
             <div class = "app-header"><img class ="appImage" src = {{IconPath}} alt=""><p>{{appTitle}}</p>
                 <div style="width: 50px;"></div>
                 <img class = "resizer" src = "window-contract.webp"  (mouseup)="OnSizeDown()">

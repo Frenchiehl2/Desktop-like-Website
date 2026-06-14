@@ -14,8 +14,14 @@
     justify-self: center;
     align-content: center;
     border-radius: 3px;
-    border-width: 1px;
+    border-width: 3px;
+    border-radius: 5px;
     width: 100%;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+     background:
+    linear-gradient(#fff, #cde4ffd7) padding-box,
+    linear-gradient(to right, rgb(208, 231, 241), blue) border-box;
+  background-clip: padding-box, border-box;
 }
 
 .body{
@@ -32,6 +38,7 @@
 .simulations{
     border-top-width: 1px;
     margin-top: 10px;
+     border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
 }
 
 .list{
@@ -40,17 +47,20 @@
 }
 .element{
     border-width: 1px;
+     border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
     margin: 5px;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.466);
     justify-self: center;
     align-content: center;
     transition: 0.2s;
+
 }
 .element:hover{
     transform: translateY(-2px);
-    background-color: rgb(210, 210, 236);
-    transition: 0.2s;
+     background-color: #9fbce2;
+    transition: color 0.3s ease-in-out;
+    transition: 0.5s;
 }
 
 .image{
@@ -67,4 +77,9 @@
     padding: 5px;
     border-radius: 4px;
     border-width: 1px;
+    border-color: #3a4ed5;
+     background:
+    linear-gradient(#fff, #cde4ffd7) padding-box,
+    linear-gradient(to right, rgb(208, 231, 241), blue) border-box;
+  background-clip: padding-box, border-box;
 }
