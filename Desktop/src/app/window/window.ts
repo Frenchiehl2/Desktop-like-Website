@@ -32,7 +32,7 @@ export class ContentWindow{
   
   isFullscreen = false;
 
-  freePos:Point = {x:window.innerWidth * 0.25,y:window.innerHeight * 0.15};
+  freePos:Point = {x:window.innerWidth * 0.2,y:window.innerHeight * 0.10};
 
   tempWidth = 0;
   tempHeight = 0;
