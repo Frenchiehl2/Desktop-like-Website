@@ -16,22 +16,22 @@ export class Icon {
 
  mousePressed = 0;
   onMousePressDown(element: HTMLElement){
-  this.mousePressed ++;
- var defaultMouseClicks;
+  var defaultMouseClicks;
  
-  if(this.starterIcon){
-    defaultMouseClicks = 1;
-  }else{
-    defaultMouseClicks = 2;
-  }
-  if(this.mousePressed == defaultMouseClicks){
+  if(this.mousePressed == 1){
     this.Open.emit();
-    this.mousePressed = 0;
+  
   }
 
-  timer(600).subscribe(() => {
+  this.InitializeOpenCheck();
+  }
+
+  InitializeOpenCheck(){
+    this.mousePressed ++;
+   
+    timer(300).subscribe(() => {
     if(this.mousePressed > 0 && !this.starterIcon){
-      this.mousePressed --;
+      this.mousePressed = 0;
     }
     });
   }

@@ -1,7 +1,7 @@
-<div #iconButton class = "icon" (mouseup)="onMousePressDown(iconButton)">
+<div #iconButton class = "icon" (mousedown)="InitializeOpenCheck()" (mouseup)="onMousePressDown(iconButton)">
 
     
-    <img class= "IconImage" src = {{IconPath}} alt="">
+    <img class= "IconImage"  alt="Icons" src = {{IconPath}} alt="">
     <h1 id = "appTitle">{{Title}}</h1>
     
 </div>

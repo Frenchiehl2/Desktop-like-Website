@@ -1,11 +1,12 @@
 <div  class="contentPage"  [style.width.px]="contentWIdth - 24" [style.height.px]="contentHeight - 58">
     <div class = "header">
-        <h1 style="font-size: 200%; font-weight: bolder;">Models</h1>
+        <h1 id="modelsTitle">Models</h1>
     </div>
     <div class ="body">
         <div class = "description">Wellcome to my models page,<br>
         feel free to check out some of my 3D modeling work, as there are alot still in progress. have a look at my Sketchfab page as well: <a class = "sketchLink" href="https://sketchfab.com/frenchiehl2"  target="_blank">Profile</a><br><br>
-        Load the models by <code><b>clicking</b> </code> their respective previews and use <code><b>right</b></code> mouse button and <code><b>middle</b></code> mouse button to instect them</div>
+        Load the models by <code><b>clicking</b> </code> their respective previews and use <code><b>right</b></code> mouse button and <code><b>middle</b></code> mouse button to instect them
+        </div>
         
         <div class ="models">
             <div class = "modelHolder"><app-model-renderer class="model" [signal]="load" [modelID]="0" (clearModels)="OnClearModels($event)"[modelLink]="'https://sketchfab.com/3d-models/industrial-tower-ef8cc1eeaa134de180af4b408c2a6ba3'"[previewImage] = "'placehoalderImages/Tower.webp'" [Model]="'Models/IndustrialTower.glb'" [CamXpos] = "0"[CamYpos] = "22" [CamZpos]="45"></app-model-renderer></div>
