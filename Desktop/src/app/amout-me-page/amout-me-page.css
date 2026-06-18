@@ -35,7 +35,8 @@
 }
 .proficienciesList{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 350px 350px 350px;
+    justify-content: center;
 }
 .spacer{
     height: 20px;
@@ -57,6 +58,8 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.466);
     transition: 0.2s;
     min-height: 120px;
+    min-width: 100px;
+    max-width: 400px;
 }
 .listElement:hover{
     transition: color 1s ease-in-out;
@@ -71,4 +74,74 @@
     border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
     margin-top: 20px;
 }
+#WebGL{
+    width: 150px; 
+    height: 50px;
+}
+#OpenGL{
+    width: 150px; 
+    height: 50px;
+}
+#Vulkan{
+    width:250px; 
+    height: 40px;
+}
+#Verilog{
+    border-radius:10px; 
+    width: 200px; 
+    height: 80px;
+}
+#Java{
+    height: 100px;
+}
 
+#Angular{
+    width: 200px; 
+    height: 40px;
+}
+
+#Godot{
+    width: 150px; 
+    height: 60px;
+}
+
+#Unity{
+    width: 150px; 
+    height: 50px;
+}
+
+#Unreal{
+    width: 100px; 
+    height: 100px;
+}
+#Blender{
+    width: 175px; 
+    height: 40px;
+}
+#Matlab{
+    width: 150px; 
+    height: 100px; 
+}
+#Figma{
+    width: 120px; 
+    height: 60px;
+}
+
+#Gnu{
+    width: 80px; 
+    height: 80px;
+    border-radius: 5px;
+}
+
+#aboutMe{
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.code{
+    color: blue; 
+    font-weight: bold;
+}
+.subTitle{
+    font-size: 150%;
+}

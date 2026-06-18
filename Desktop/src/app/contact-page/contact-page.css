@@ -93,3 +93,30 @@
     margin: 10px;
 }
 
+#contactMe{
+    font-size: 200%;
+    font-weight: bolder;
+}
+#code{
+    font-weight: bold;
+}
+#contactDiv{
+    height: 20px;
+}
+
+#email{
+     display: flex; 
+     justify-content: start;
+}
+#emailP{
+    justify-self: center
+}
+#emailDivHeight{
+    height: 10px;
+}
+#contactDivHeight{
+    height: 30px;
+}
+#youtubeContact{
+    width: 50px;
+}

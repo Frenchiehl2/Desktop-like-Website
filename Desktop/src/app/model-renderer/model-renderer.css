@@ -2,7 +2,8 @@
     transition: 0.2s;
     justify-self: center;
     padding: 5px;
-  
+    margin: 10px;
+    border-radius: 1px;
 }
 .resetButton:hover{
     transition: 0.2s;
@@ -67,4 +68,8 @@
 .previrewImage:active{
     transition: 0.2s;
 
+}
+#models{
+    font-size: 200%; 
+    font-weight: bolder;
 }

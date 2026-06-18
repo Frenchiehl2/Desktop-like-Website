@@ -61,6 +61,7 @@
 .sketchLink:active{
     transition: 0.2s;
 }
-.model{
-    margin: 10px;
+#modelsTitle{
+    font-size: 200%; 
+    font-weight: bolder;
 }

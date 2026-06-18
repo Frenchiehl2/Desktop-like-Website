@@ -83,3 +83,23 @@
     linear-gradient(to right, rgb(208, 231, 241), blue) border-box;
   background-clip: padding-box, border-box;
 }
+
+.subCategories{
+       font-size: 200%;
+}
+.standardImageElement{
+    width: 550px;
+}
+
+#Printer3D{
+    width: 280px;
+}
+#coffieMaker{
+    width: 550px; 
+    height: 140px;
+}
+
+#PizzaService{
+    width: 200px; 
+    height:200px;
+}

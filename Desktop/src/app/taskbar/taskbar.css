@@ -90,3 +90,6 @@
 .time{
     min-width: 140px;
 }
+#taskBarDiv{
+    width: 20px;
+}

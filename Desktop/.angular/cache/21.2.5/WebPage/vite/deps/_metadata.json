@@ -1,67 +1,67 @@
 {
-  "hash": "e657a3a3",
+  "hash": "bf2ee504",
   "configHash": "f62ab73f",
-  "lockfileHash": "189efce8",
-  "browserHash": "793db6f8",
+  "lockfileHash": "1297fc5b",
+  "browserHash": "718e094e",
   "optimized": {
     "@angular/cdk/clipboard": {
       "src": "../../../../../../node_modules/@angular/cdk/fesm2022/clipboard.mjs",
       "file": "@angular_cdk_clipboard.js",
-      "fileHash": "a68fa123",
+      "fileHash": "1234c1b1",
       "needsInterop": false
     },
     "@angular/cdk/drag-drop": {
       "src": "../../../../../../node_modules/@angular/cdk/fesm2022/drag-drop.mjs",
       "file": "@angular_cdk_drag-drop.js",
-      "fileHash": "94ee277b",
+      "fileHash": "dc4b6a7f",
       "needsInterop": false
     },
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "0d1b16a3",
+      "fileHash": "ebf70440",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "b36431be",
+      "fileHash": "d56fed1e",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "040b8451",
+      "fileHash": "5b9ad845",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "4b8d1eb6",
+      "fileHash": "3369d571",
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "e81a8618",
+      "fileHash": "e0344f51",
       "needsInterop": false
     },
     "three": {
       "src": "../../../../../../node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "f1a565df",
+      "fileHash": "1333fd60",
       "needsInterop": false
     },
     "three/addons/controls/OrbitControls.js": {
       "src": "../../../../../../node_modules/three/examples/jsm/controls/OrbitControls.js",
       "file": "three_addons_controls_OrbitControls__js.js",
-      "fileHash": "672047f4",
+      "fileHash": "a00bf53b",
       "needsInterop": false
     },
     "three/addons/loaders/GLTFLoader.js": {
       "src": "../../../../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
       "file": "three_addons_loaders_GLTFLoader__js.js",
-      "fileHash": "7091aa0b",
+      "fileHash": "b7b24ecd",
       "needsInterop": false
     }
   },
